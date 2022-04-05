@@ -33,7 +33,7 @@ export default function Projects() {
       //     );
       //     setrepoFunction("Error");
       //   });
-      setrepoFunction(openSourceProject?.data?.user?.pinnedItems?.edges)
+      setrepoFunction(openSourceProject?.data?.user?.pinnedItems?.edges||[])
     };
     getRepoData();
   }, []);
