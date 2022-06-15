@@ -261,9 +261,7 @@ const bigProjects = {
     {
       image: require("./assets/images/digitalmenu_logo.png"),
       projectName: "Digital Menu",
-      projectDesc: `SonicKeyTM is SonicData’s unique new technology platform for music,
-      social media, advertising, TV, games and film. We have Mobile app, Desktop app, Portal etc.`,
-      role: "Founder & Developer",
+      projectDesc: `Digital menu will convert every restaurant's paper menu with digital menu, which will be available on internet. People can use their own smartphone to see restaurant menu and order items.`,
       footerLink: [
         {
           name: "Under development",

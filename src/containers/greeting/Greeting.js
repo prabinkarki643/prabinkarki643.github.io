@@ -39,10 +39,23 @@ export default function Greeting() {
               </p>
               <SocialMedia />
               <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
+                <Button
+                  text="Contact me"
+                  href="#contact"
+                  style={{marginRight: 5}}
+                />
                 {greeting.resumeLink && (
                   <Button
-                    text="See my resume"
+                  text="See my resume"
+                    // text={
+                    //   <>
+                    //     See my resume{" "}
+                    //     <select name="resumes" className="counytry-select">
+                    //       <option value="volvo">Nepal</option>
+                    //       <option value="saab">India</option>
+                    //     </select>
+                    //   </>
+                    // }
                     newTab={true}
                     href={greeting.resumeLink}
                   />
@@ -60,9 +73,9 @@ export default function Greeting() {
               ></img>
             )} */}
             <img
-                alt="man sitting on table"
-                src={require("../../assets/images/my_image.jpeg")}
-              ></img>
+              alt="man sitting on table"
+              src={require("../../assets/images/my_image.jpeg")}
+            ></img>
           </div>
         </div>
       </div>
