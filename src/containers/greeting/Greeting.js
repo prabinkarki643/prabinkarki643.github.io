@@ -15,6 +15,52 @@ export default function Greeting() {
   if (!greeting.displayGreeting) {
     return null;
   }
+  const displayResumeLinks = () => {
+    const {resumeLinks} = greeting;
+    if (resumeLinks && typeof resumeLinks == "string") {
+      return (
+        <Button
+          text="See my resume"
+          newTab={true}
+          href={greeting.resumeLinks}
+        />
+      );
+    } else if (resumeLinks && Array.isArray(resumeLinks)) {
+      return (
+        <Button
+          text={
+            <>
+              <span
+                style={{marginRight: 3,width:'100%',height:100}}
+                onClick={() => {
+                  var selectedResumeLink = document.getElementById(
+                    "country-select-dropdown"
+                  ).value;
+                  window.open(selectedResumeLink, "_blank");
+                }}
+              >
+                See my resume
+              </span>
+              <select
+                id="country-select-dropdown"
+                name="resumes"
+                className="counytry-select"
+              >
+                {resumeLinks.map((relink, key) => (
+                  <option value={relink.link} key={key}>
+                    {relink.name}
+                  </option>
+                ))}
+              </select>
+            </>
+          }
+          newTab={true}
+          style={{cursor: 'default'}}
+        />
+      );
+    }
+    return null;
+  };
   return (
     <Fade bottom duration={1000} distance="40px">
       <div className="greet-main" id="greeting">
@@ -44,22 +90,14 @@ export default function Greeting() {
                   href="#contact"
                   style={{marginRight: 5}}
                 />
-                {greeting.resumeLink && (
+                {/* {greeting.resumeLinks && (
                   <Button
-                  text="See my resume"
-                    // text={
-                    //   <>
-                    //     See my resume{" "}
-                    //     <select name="resumes" className="counytry-select">
-                    //       <option value="volvo">Nepal</option>
-                    //       <option value="saab">India</option>
-                    //     </select>
-                    //   </>
-                    // }
+                    text="See my resume"
                     newTab={true}
                     href={greeting.resumeLink}
                   />
-                )}
+                )} */}
+                {displayResumeLinks()}
               </div>
             </div>
           </div>

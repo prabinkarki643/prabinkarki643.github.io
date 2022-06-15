@@ -25,8 +25,17 @@ const greeting = {
   subTitle: emoji(
     "A passionate Full Stack Software Engineer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
   ),
-  resumeLink:
-    "https://drive.google.com/file/d/1Z4jnB7ApuIOiLI-i15QU2_aBAYsQFpu4/view?usp=sharing", // Set to empty to hide the button
+  resumeLinks: [
+    {
+      name: "India",
+      link: "https://drive.google.com/file/d/1Z4jnB7ApuIOiLI-i15QU2_aBAYsQFpu4/view?usp=sharing"
+    },
+    {
+      name: "Nepal",
+      link: "https://drive.google.com/file/d/1wsEC7mZ0bv9FZvOFxIJCylUar96ojykn/view?usp=sharing"
+    }
+  ],
+
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -129,7 +138,7 @@ const educationInfo = {
       schoolName: "Bangalore Technological Institute,",
       logo: require("./assets/images/BTI-logo.webp"),
       subHeader: "Bachelor of Engineering(BE)",
-      duration: "2014 - 2018",
+      duration: "2014 - 2018"
       // desc: "Participated in the research of XXX and published 3 papers.",
       // descBullets: [
       //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -140,7 +149,7 @@ const educationInfo = {
       schoolName: "Pinnacle Academy",
       logo: require("./assets/images/pinnacle-logo.png"),
       subHeader: "12th(Computer Science)",
-      duration: "2012 - 2014",
+      duration: "2012 - 2014"
       // desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
       // descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     }
